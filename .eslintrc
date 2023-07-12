@@ -1,0 +1,122 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "ecmaVersion": 2021
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "vue/setup-compiler-macros": true
+  },
+  "extends": [
+    "plugin:vue/essential",
+    "plugin:vue/base",
+    "plugin:vue/vue3-recommended",
+    "plugin:cypress/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:nuxt/recommended",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended",
+    "eslint-config-prettier",
+    "eslint:recommended"
+  ],
+  "plugins": ["vue", "cypress", "@typescript-eslint", "nuxt", "tailwindcss"],
+  "rules": {
+    "semi": ["error", "never"],
+    "linebreak-style": "off",
+    "comma-dangle": [
+      "warn",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "implicit-arrow-linebreak": 0,
+    "function-paren-newline": 0,
+    "radix": ["warn", "as-needed"],
+    "no-plusplus": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "vue/max-attributes-per-line": [
+      "warn",
+      {
+        "singleline": {
+          "max": 4
+        },
+        "multiline": {
+          "max": 1
+        }
+      }
+    ],
+    "vue/valid-attribute-name": ["off"],
+    "vue/html-self-closing": [
+      "warn",
+      {
+        "html": {
+          "void": "always",
+          "normal": "always",
+          "component": "always"
+        },
+        "svg": "always",
+        "math": "always"
+      }
+    ],
+    "tailwindcss/no-custom-classname": ["off"],
+    "vue/no-v-html": ["off"],
+    "vue/attributes-order": [
+      "error",
+      {
+        "order": [
+          "LIST_RENDERING",
+          "DEFINITION",
+          "CONDITIONALS",
+          "RENDER_MODIFIERS",
+          "GLOBAL",
+          ["UNIQUE", "SLOT"],
+          "TWO_WAY_BINDING",
+          "OTHER_DIRECTIVES",
+          "OTHER_ATTR",
+          "EVENTS",
+          "CONTENT"
+        ],
+        "alphabetical": false
+      }
+    ],
+    "no-explicit-any": ["off"],
+    "vue/multi-word-component-names": [
+      "error",
+      {
+        "ignores": [
+          "sidebar",
+          "default",
+          "index",
+          "edit",
+          "login",
+          "orders",
+          "register",
+          "[...path]",
+          "cart",
+          "checkout",
+          "review",
+          "confirmation",
+          "payment",
+          "delivery",
+          "shipping",
+          "distributors",
+          "products",
+          "user",
+          "error",
+          "base",
+          "sidebar"
+        ]
+      }
+    ],
+    "vue/no-v-model-argument": ["off"]
+  }
+}
