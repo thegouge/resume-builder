@@ -1,4 +1,4 @@
-export function Loading() {
+export default function Loading() {
   return (
     <div
       className="relative h-full w-full z-50 flex justify-center items-center"

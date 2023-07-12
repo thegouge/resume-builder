@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home } from './components/Home'
-import { Resume } from './components/Resume'
+import Home from './components/Home'
+import Resume from './components/Resume'
 
 export default function App() {
   return (
